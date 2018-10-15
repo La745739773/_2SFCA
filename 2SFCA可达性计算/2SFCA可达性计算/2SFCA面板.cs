@@ -164,30 +164,6 @@ namespace _2SFCA可达性计算
         }
         private void Calculatet_accessiblity()
         {
-            //MessageBox.Show("选择公共服务设施文件！");
-            //OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.Filter = "csv文件|*.csv|所有文件|*.*";
-            //openFileDialog.RestoreDirectory = true;
-            //openFileDialog.FilterIndex = 1;
-            //if (openFileDialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open);
-            //    StreamReader sr = new StreamReader(fs, Encoding.UTF8);
-            //    string line;
-            //    while((line = sr.ReadLine()) != null)
-            //    {
-            //        string[] _array = line.Split(',');
-            //        Pulibc_Facility temp = new Pulibc_Facility();
-            //        temp.id = int.Parse(_array[0]);
-            //        temp.name = _array[1];
-            //        temp.grade = int.Parse(_array[2]);
-            //        temp.supply_Score = int.Parse(_array[3]);
-            //        Facility_List.Add(temp);
-            //    }
-            //    sr.Close();
-            //    fs.Close();
-            //}
-
             for(int i = 0;i<Facility_List.Count;i++)
             {
                 int S = Facility_List[i].supply_Score;//第i个服务设施的供给量
@@ -211,9 +187,10 @@ namespace _2SFCA可达性计算
                 grid_List[i].accessibility_Score = 0;
                 for (int j = 0;j<Facility_List.Count;j++)
                 {
-                    if(grid_List[i].durationList_toHospital[j] < time_threshold)
+                    int time_ji = grid_List[i].durationList_toHospital[j];
+                    if (time_ji < time_threshold)
                     {
-                        grid_List[i].accessibility_Score += Facility_List[j].Supplydemand_ratio;
+                        grid_List[i].accessibility_Score += ((Math.Pow(Math.E, Math.Pow((time_ji / time_threshold), 2.0) * (-0.5)) - Math.Pow(Math.E, -0.5)) / (1 - Math.Pow(Math.E, -0.5))) * Facility_List[j].Supplydemand_ratio;
                     }
                     else
                     {
