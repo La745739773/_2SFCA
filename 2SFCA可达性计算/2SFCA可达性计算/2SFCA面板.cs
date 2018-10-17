@@ -28,7 +28,7 @@ namespace _2SFCA可达性计算
         public int Facility_num;
         public List<ID_POPULATION> Population_list;
         public int Sum_population;
-        public int time_threshold;
+        public double time_threshold;
         public int flag_Thresold;
 
         //-------------类成员定义-----------------------------------------------
@@ -136,7 +136,6 @@ namespace _2SFCA可达性计算
                     {
                         //int temp_duration = int.MaxValue;
                     }
-
                 }
                 sr.Close();
                 fs.Close();
@@ -170,7 +169,7 @@ namespace _2SFCA可达性计算
                 double X = 0;//第i个服务设施的总需求量
                 for(int j = 0;j<grid_List.Count;j++)
                 {
-                    int time_ji = grid_List[j].durationList_toHospital[i];
+                    double time_ji = grid_List[j].durationList_toHospital[i];
                     if (time_ji < time_threshold)
                     {
                         X += ((Math.Pow(Math.E, Math.Pow((time_ji / time_threshold), 2.0) * (-0.5)) - Math.Pow(Math.E, -0.5)) / (1 - Math.Pow(Math.E, -0.5)))   * grid_List[j].grid_population;
@@ -187,7 +186,7 @@ namespace _2SFCA可达性计算
                 grid_List[i].accessibility_Score = 0;
                 for (int j = 0;j<Facility_List.Count;j++)
                 {
-                    int time_ji = grid_List[i].durationList_toHospital[j];
+                    double time_ji = grid_List[i].durationList_toHospital[j];
                     if (time_ji < time_threshold)
                     {
                         grid_List[i].accessibility_Score += ((Math.Pow(Math.E, Math.Pow((time_ji / time_threshold), 2.0) * (-0.5)) - Math.Pow(Math.E, -0.5)) / (1 - Math.Pow(Math.E, -0.5))) * Facility_List[j].Supplydemand_ratio;
@@ -292,6 +291,58 @@ namespace _2SFCA可达性计算
         private void radioBtn_inputTime_CheckedChanged(object sender, EventArgs e)
         {
             flag_Thresold = 2;
+        }
+
+        private void Export_closetFaculity_Click(object sender, EventArgs e)
+        {
+            double[] closet_population = new double[500];
+            for(int i = 0;i<500;i++)
+            {
+                closet_population[i] = 0;
+            }
+            grid_List.Sort(new NetworkComparer());
+            for(int i = 0;i < grid_List.Count;i++)
+            {
+                for(int j = 0;j<500;j++)
+                {
+                    if (grid_List[i].closet_travelTime <= j * 60)
+                    {
+                        closet_population[j] += grid_List[i].grid_population;
+                    }
+                }
+            }
+            for (int j = 0; j < 500; j++)
+            {
+                closet_population[j] /= Sum_population;
+            }
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "csv文件(*.csv)|*.csv";
+            sfd.FilterIndex = 1;
+            sfd.RestoreDirectory = true;
+            //sfd.DefaultFileName = "Accessibility_Score";
+            //MessageBox.Show("计算完成,保存结果到文件");
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                string localFilePath = sfd.FileName.ToString(); //获得文件路径 
+                string fileNameExt = localFilePath.Substring(localFilePath.LastIndexOf("\\") + 1); //获取文件名，不带路径
+                FileStream fs = new FileStream(localFilePath, FileMode.OpenOrCreate);
+                StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
+                for (int i = 0; i < 500; i++)
+                {
+                    if(closet_population[i] == 0)
+                    {
+                        continue;
+                    }
+                    sw.WriteLine(i.ToString() + "," + (closet_population[i] * 100).ToString() + "%");
+                    if(closet_population[i] == 1)
+                    {
+                        break;
+                    }
+                }
+                sw.Close();
+                fs.Close();
+            }
+            MessageBox.Show("结果保存完成！");
         }
     }
 

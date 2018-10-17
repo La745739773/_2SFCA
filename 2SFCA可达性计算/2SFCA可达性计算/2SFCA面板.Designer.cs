@@ -42,6 +42,10 @@
             this.Load_publicFac_btn = new System.Windows.Forms.Button();
             this.radioBtn_ClosetFac = new System.Windows.Forms.RadioButton();
             this.radioBtn_inputTime = new System.Windows.Forms.RadioButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.functionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Export_closetFaculity = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +68,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(15, 10);
+            this.label2.Location = new System.Drawing.Point(19, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 2;
@@ -74,7 +78,7 @@
             // 
             this.Attenuation_functionCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Attenuation_functionCombo.FormattingEnabled = true;
-            this.Attenuation_functionCombo.Location = new System.Drawing.Point(122, 12);
+            this.Attenuation_functionCombo.Location = new System.Drawing.Point(126, 28);
             this.Attenuation_functionCombo.Name = "Attenuation_functionCombo";
             this.Attenuation_functionCombo.Size = new System.Drawing.Size(121, 20);
             this.Attenuation_functionCombo.TabIndex = 10;
@@ -174,6 +178,31 @@
             this.radioBtn_inputTime.UseVisualStyleBackColor = true;
             this.radioBtn_inputTime.CheckedChanged += new System.EventHandler(this.radioBtn_inputTime_CheckedChanged);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.functionsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(340, 25);
+            this.menuStrip1.TabIndex = 12;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // functionsToolStripMenuItem
+            // 
+            this.functionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Export_closetFaculity});
+            this.functionsToolStripMenuItem.Name = "functionsToolStripMenuItem";
+            this.functionsToolStripMenuItem.Size = new System.Drawing.Size(74, 21);
+            this.functionsToolStripMenuItem.Text = "Functions";
+            // 
+            // Export_closetFaculity
+            // 
+            this.Export_closetFaculity.Name = "Export_closetFaculity";
+            this.Export_closetFaculity.Size = new System.Drawing.Size(160, 22);
+            this.Export_closetFaculity.Text = "导出最邻近结果";
+            this.Export_closetFaculity.Click += new System.EventHandler(this.Export_closetFaculity_Click);
+            // 
             // _2SFCAForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -193,11 +222,15 @@
             this.Controls.Add(this.GridPopu_FilenameTxt);
             this.Controls.Add(this.Population_threshold_Textbox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "_2SFCAForm";
             this.Text = "_2SFCA面板";
             this.Load += new System.EventHandler(this._2SFCAForm_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +252,8 @@
         private System.Windows.Forms.Button Load_publicFac_btn;
         private System.Windows.Forms.RadioButton radioBtn_ClosetFac;
         private System.Windows.Forms.RadioButton radioBtn_inputTime;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem functionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Export_closetFaculity;
     }
 }
