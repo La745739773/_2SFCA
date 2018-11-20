@@ -22,5 +22,11 @@ namespace _2SFCA可达性计算
             _2SFCAForm _2SFCA = new _2SFCAForm();
             _2SFCA.ShowDialog();
         }
+
+        private void Extend_Ga2SFCA_menuItem_Click(object sender, EventArgs e)
+        {
+            Extend_Ga2SFCA _form = new Extend_Ga2SFCA();
+            _form.ShowDialog();
+        }
     }
 }

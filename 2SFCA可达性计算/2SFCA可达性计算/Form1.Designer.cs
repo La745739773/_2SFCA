@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.可达性计算模型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TwosFCA_menuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Extend_Ga2SFCA_menuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // 可达性计算模型ToolStripMenuItem
             // 
             this.可达性计算模型ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TwosFCA_menuItem});
+            this.TwosFCA_menuItem,
+            this.Extend_Ga2SFCA_menuItem});
             this.可达性计算模型ToolStripMenuItem.Name = "可达性计算模型ToolStripMenuItem";
             this.可达性计算模型ToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
             this.可达性计算模型ToolStripMenuItem.Text = "可达性计算模型";
@@ -55,9 +57,16 @@
             // TwosFCA_menuItem
             // 
             this.TwosFCA_menuItem.Name = "TwosFCA_menuItem";
-            this.TwosFCA_menuItem.Size = new System.Drawing.Size(152, 22);
+            this.TwosFCA_menuItem.Size = new System.Drawing.Size(172, 22);
             this.TwosFCA_menuItem.Text = "2SFCA";
             this.TwosFCA_menuItem.Click += new System.EventHandler(this.TwosFCA_menuItem_Click);
+            // 
+            // Extend_Ga2SFCA_menuItem
+            // 
+            this.Extend_Ga2SFCA_menuItem.Name = "Extend_Ga2SFCA_menuItem";
+            this.Extend_Ga2SFCA_menuItem.Size = new System.Drawing.Size(172, 22);
+            this.Extend_Ga2SFCA_menuItem.Text = "Extend_Ga2SFCA";
+            this.Extend_Ga2SFCA_menuItem.Click += new System.EventHandler(this.Extend_Ga2SFCA_menuItem_Click);
             // 
             // Main_frame
             // 
@@ -82,6 +91,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 可达性计算模型ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TwosFCA_menuItem;
+        private System.Windows.Forms.ToolStripMenuItem Extend_Ga2SFCA_menuItem;
     }
 }
 

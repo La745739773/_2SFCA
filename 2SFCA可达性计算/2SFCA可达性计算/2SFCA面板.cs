@@ -319,8 +319,6 @@ namespace _2SFCA可达性计算
             sfd.Filter = "csv文件(*.csv)|*.csv";
             sfd.FilterIndex = 1;
             sfd.RestoreDirectory = true;
-            //sfd.DefaultFileName = "Accessibility_Score";
-            //MessageBox.Show("计算完成,保存结果到文件");
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string localFilePath = sfd.FileName.ToString(); //获得文件路径 
@@ -352,6 +350,8 @@ namespace _2SFCA可达性计算
         public int grid_population;
         public List<int> durationList_toHospital;
         public int closet_travelTime;
+        public int farest_travelTime;
+        public double average_travelTime;
         public double accessibility_Score;
         public Population_netWork()
         {
@@ -369,9 +369,26 @@ namespace _2SFCA可达性计算
         public string name;
         public int grade;
         public int supply_Score;
-
         public double Supplydemand_ratio;
     }
+
+
+    public class AverageComparer : IComparer<Population_netWork>
+    {
+        public int Compare(Population_netWork x, Population_netWork y)
+        {
+            if (x.average_travelTime > y.average_travelTime)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
+            return 0;
+        }
+    }
+
     public class NetworkComparer : IComparer<Population_netWork>
     {
         public int Compare(Population_netWork x, Population_netWork y)
