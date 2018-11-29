@@ -141,7 +141,7 @@ namespace _2SFCA可达性计算
                 fs.Close();
                 if (flag_Thresold == 1)
                 {
-                    grid_List.Sort(new NetworkComparer());
+                    grid_List.Sort(new ClosetComparer());
                     int Population_threshold = int.Parse(Population_threshold_Textbox.Text) * Sum_population / 100;
                     int popu_count = 0;
                     for (int i = 0; i < grid_List.Count; i++)
@@ -300,7 +300,7 @@ namespace _2SFCA可达性计算
             {
                 closet_population[i] = 0;
             }
-            grid_List.Sort(new NetworkComparer());
+            grid_List.Sort(new ClosetComparer());
             for(int i = 0;i < grid_List.Count;i++)
             {
                 for(int j = 0;j<500;j++)
@@ -389,7 +389,7 @@ namespace _2SFCA可达性计算
         }
     }
 
-    public class NetworkComparer : IComparer<Population_netWork>
+    public class ClosetComparer : IComparer<Population_netWork>
     {
         public int Compare(Population_netWork x, Population_netWork y)
         {
