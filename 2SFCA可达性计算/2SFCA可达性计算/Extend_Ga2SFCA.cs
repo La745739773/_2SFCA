@@ -239,6 +239,7 @@ namespace _2SFCA可达性计算
                 double k = (-Math.Pow((double.Parse(Population_threshold_Textbox.Text) * 60 - min) / 60.0, 2.0)) / Math.Log(Math.E, double.Parse(damping_function_DownValue.Text));
                 KValue_textbox.Text = Math.Round(k, 2).ToString();
                 K_Value = k;
+                time_threshold = double.Parse(Population_threshold_Textbox.Text) * 60;
             }
         }
 
