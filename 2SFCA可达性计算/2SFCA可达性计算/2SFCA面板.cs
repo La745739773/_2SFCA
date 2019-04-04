@@ -139,6 +139,12 @@ namespace _2SFCA可达性计算
                 }
                 sr.Close();
                 fs.Close();
+                double sum_ClosetTime = 0;
+                for(int kk = 0; kk < grid_List.Count;kk++)
+                {
+                    sum_ClosetTime += grid_List[kk].closet_travelTime;
+                }
+                sum_ClosetTime /= grid_List.Count;
                 if (flag_Thresold == 1)
                 {
                     grid_List.Sort(new ClosetComparer());
