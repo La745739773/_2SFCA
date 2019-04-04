@@ -346,7 +346,7 @@ namespace _2SFCA可达性计算
 
                 for (int j = i * Hospital_Capacity.Count; j < (i + 1) * Hospital_Capacity.Count; j++)
                 {
-                    temp.CartravelTimes.Add(TimeMatrix_Car[j]);
+                    temp.CartravelTimes.Add(Community_TimeMatrix[j]);
                 }
                 Community_List.Add(temp);
             }
