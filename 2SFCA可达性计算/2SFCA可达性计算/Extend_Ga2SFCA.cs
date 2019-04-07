@@ -230,13 +230,13 @@ namespace _2SFCA可达性计算
                         break;
                     }
                 }
-                double k = (-Math.Pow((time_threshold - min) / 60.0, 2.0)) / Math.Log(Math.E, double.Parse(damping_function_DownValue.Text));
+                double k = (-Math.Pow((time_threshold - min) / 60.0, 2.0)) / Math.Log(double.Parse(damping_function_DownValue.Text));
                 KValue_textbox.Text = Math.Round(k, 2).ToString();
                 K_Value = k;
             }
             else
             {
-                double k = (-Math.Pow((double.Parse(Population_threshold_Textbox.Text) * 60 - min) / 60.0, 2.0)) / Math.Log(Math.E, double.Parse(damping_function_DownValue.Text));
+                double k = (-Math.Pow((double.Parse(Population_threshold_Textbox.Text) - (double)min), 2.0)) / Math.Log(double.Parse(damping_function_DownValue.Text));
                 KValue_textbox.Text = Math.Round(k, 2).ToString();
                 K_Value = k;
                 time_threshold = double.Parse(Population_threshold_Textbox.Text) * 60;
