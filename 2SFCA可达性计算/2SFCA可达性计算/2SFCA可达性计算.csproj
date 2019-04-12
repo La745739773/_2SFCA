@@ -52,6 +52,12 @@
     <Compile Include="2SFCA面板.Designer.cs">
       <DependentUpon>2SFCA面板.cs</DependentUpon>
     </Compile>
+    <Compile Include="D_OCapacityCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_OCapacityCount.Designer.cs">
+      <DependentUpon>D_OCapacityCount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extend_Ga2SFCA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="2SFCA面板.resx">
       <DependentUpon>2SFCA面板.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_OCapacityCount.resx">
+      <DependentUpon>D_OCapacityCount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Extend_Ga2SFCA.resx">
       <DependentUpon>Extend_Ga2SFCA.cs</DependentUpon>

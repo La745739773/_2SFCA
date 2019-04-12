@@ -33,13 +33,16 @@
             this.TwosFCA_menuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Extend_Ga2SFCA_menuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.multiModal2SFCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.服务能力统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.D_O_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.可达性计算模型ToolStripMenuItem});
+            this.可达性计算模型ToolStripMenuItem,
+            this.服务能力统计ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(410, 25);
@@ -77,6 +80,21 @@
             this.multiModal2SFCAToolStripMenuItem.Text = "Multi_Modal2SFCA";
             this.multiModal2SFCAToolStripMenuItem.Click += new System.EventHandler(this.multiModal2SFCAToolStripMenuItem_Click);
             // 
+            // 服务能力统计ToolStripMenuItem
+            // 
+            this.服务能力统计ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.D_O_MenuItem});
+            this.服务能力统计ToolStripMenuItem.Name = "服务能力统计ToolStripMenuItem";
+            this.服务能力统计ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.服务能力统计ToolStripMenuItem.Text = "服务能力统计";
+            // 
+            // D_O_MenuItem
+            // 
+            this.D_O_MenuItem.Name = "D_O_MenuItem";
+            this.D_O_MenuItem.Size = new System.Drawing.Size(152, 22);
+            this.D_O_MenuItem.Text = "D_O";
+            this.D_O_MenuItem.Click += new System.EventHandler(this.D_O_MenuItem_Click);
+            // 
             // Main_frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -102,6 +120,8 @@
         private System.Windows.Forms.ToolStripMenuItem TwosFCA_menuItem;
         private System.Windows.Forms.ToolStripMenuItem Extend_Ga2SFCA_menuItem;
         private System.Windows.Forms.ToolStripMenuItem multiModal2SFCAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 服务能力统计ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem D_O_MenuItem;
     }
 }
 

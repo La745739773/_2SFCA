@@ -34,5 +34,11 @@ namespace _2SFCA可达性计算
             Multi_modal2SFCA _form = new Multi_modal2SFCA();
             _form.ShowDialog();
         }
+
+        private void D_O_MenuItem_Click(object sender, EventArgs e)
+        {
+            D_OCapacityCount form = new D_OCapacityCount();
+            form.ShowDialog();
+        }
     }
 }
