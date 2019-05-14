@@ -35,6 +35,7 @@
             this.multiModal2SFCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.服务能力统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.D_O_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.可达性计算模型ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TwosFCA_menuItem,
             this.Extend_Ga2SFCA_menuItem,
-            this.multiModal2SFCAToolStripMenuItem});
+            this.multiModal2SFCAToolStripMenuItem,
+            this.graToolStripMenuItem});
             this.可达性计算模型ToolStripMenuItem.Name = "可达性计算模型ToolStripMenuItem";
             this.可达性计算模型ToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
             this.可达性计算模型ToolStripMenuItem.Text = "可达性计算模型";
@@ -91,9 +93,16 @@
             // D_O_MenuItem
             // 
             this.D_O_MenuItem.Name = "D_O_MenuItem";
-            this.D_O_MenuItem.Size = new System.Drawing.Size(152, 22);
+            this.D_O_MenuItem.Size = new System.Drawing.Size(100, 22);
             this.D_O_MenuItem.Text = "D_O";
             this.D_O_MenuItem.Click += new System.EventHandler(this.D_O_MenuItem_Click);
+            // 
+            // graToolStripMenuItem
+            // 
+            this.graToolStripMenuItem.Name = "graToolStripMenuItem";
+            this.graToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.graToolStripMenuItem.Text = "Gravity ";
+            this.graToolStripMenuItem.Click += new System.EventHandler(this.graToolStripMenuItem_Click);
             // 
             // Main_frame
             // 
@@ -122,6 +131,7 @@
         private System.Windows.Forms.ToolStripMenuItem multiModal2SFCAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 服务能力统计ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem D_O_MenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graToolStripMenuItem;
     }
 }
 

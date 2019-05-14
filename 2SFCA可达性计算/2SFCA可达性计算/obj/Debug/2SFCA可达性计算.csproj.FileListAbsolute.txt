@@ -21,3 +21,4 @@ C:\Users\EVLEON\Desktop\核心文章\可达性计算程序\2SFCA可达性计算\
 C:\Users\EVLEON\Desktop\核心文章\可达性计算程序\2SFCA可达性计算\2SFCA可达性计算\obj\Debug\_2SFCA可达性计算.Extend_Ga2SFCA.resources
 C:\Users\EVLEON\Desktop\核心文章\可达性计算程序\2SFCA可达性计算\2SFCA可达性计算\obj\Debug\_2SFCA可达性计算.Multi_modal2SFCA.resources
 C:\Users\EVLEON\Desktop\核心文章\可达性计算程序\2SFCA可达性计算\2SFCA可达性计算\obj\Debug\_2SFCA可达性计算.D_OCapacityCount.resources
+C:\Users\EVLEON\Desktop\核心文章\可达性计算程序\2SFCA可达性计算\2SFCA可达性计算\obj\Debug\_2SFCA可达性计算.Gravity.resources

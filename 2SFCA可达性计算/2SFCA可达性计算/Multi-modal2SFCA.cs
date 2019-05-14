@@ -67,6 +67,7 @@ namespace _2SFCA可达性计算
 
         private void LoadTimeMatrix_car_Click(object sender, EventArgs e)
         {
+            TimeMatrix_Car.Clear();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "csv文件|*.csv|所有文件|*.*";
             openFileDialog.RestoreDirectory = true;

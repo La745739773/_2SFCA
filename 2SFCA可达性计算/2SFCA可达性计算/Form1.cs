@@ -40,5 +40,11 @@ namespace _2SFCA可达性计算
             D_OCapacityCount form = new D_OCapacityCount();
             form.ShowDialog();
         }
+
+        private void graToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Gravity _from = new Gravity();
+            _from.ShowDialog();
+        }
     }
 }
